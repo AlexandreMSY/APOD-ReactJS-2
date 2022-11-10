@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 export default function ApodDetails(props){
     return(
-        <div className="d-flex flex-column align-items-center container-md p-3 text-center">
+        <div className="d-flex flex-column align-items-center text-center">
             <figure>
                 <img src={props.imageSrc} alt="image" className="img-fluid"/>
             </figure>

@@ -1,32 +1,17 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import ApodDetails from './components/ApodDetails'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+  return(
+    <div>
+      <ApodDetails
+        imageSrc = "https://apod.nasa.gov/apod/image/1107/atlantisapproach_nasa_900.jpg"
+        title = "Total Lunar Eclipse"
+        explanation = "The beginning, middle, and end of a journey through planet Earth's colorful umbral shadow is captured in this timelapse composite image of a total lunar eclipse. Taken on November 8 from Kitt Peak National Observatory this eclipse's 1 hour and 25 minute long total phase starts on the right and finishes on the left. Reddened sunlight, scattered into the central shadow by Earth's dusty atmosphere produces the dramatic dark red hues reflected by the lunar disk. For this eclipse, additional reddening is likely due to scattering from ash lingering in the atmosphere after a large volcanic eruption in the southern Pacific earlier this year. Seen at the right and left, the Earth's shadow is still lighter along its edge though. That faint bluish fringe along the lunar limb is colored by sunlight filtered through Earth's stratospheric ozone layer."
+        date = "1999-03-21"
+      />
     </div>
   )
 }

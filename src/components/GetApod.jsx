@@ -9,7 +9,9 @@ export default function GetApod(){
         url: "",
         explanation: "",
         title: "",
-        date: ""
+        date: "",
+        copyright: "",
+        media_type: ""
     })
 
     const changeDate = (event) => {
@@ -31,14 +33,18 @@ export default function GetApod(){
     }, [date])
 
     return(
-        <div>
-            <input type="date" name="date" id="date" value={date} onChange={changeDate}/>
-            <ApodDetails 
-                imageSrc = {apiData.url}
-                title = {apiData.title}
-                explanation = {apiData.explanation}
-                date = {apiData.date}
-            />
+        <div className="container-md d-flex flex-column align-items-center p-2 mt-1 mb-1 border bg-dark text-light">
+            <input type="date" name="date" id="input" value={date} onChange={changeDate}/>
+            <div className="mt-2">
+                <ApodDetails 
+                    url = {apiData.url}
+                    title = {apiData.title}
+                    explanation = {apiData.explanation}
+                    date = {apiData.date}
+                    copyright = {apiData.copyright}
+                    mediaType = {apiData.media_type}
+                />
+            </div>
         </div>
     )
 }
